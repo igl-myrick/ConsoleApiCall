@@ -4,6 +4,7 @@ using RestSharp;
 using ConsoleApiCall.Keys;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace ApiTest
 {
@@ -13,8 +14,20 @@ namespace ApiTest
     {
       Task<string> apiCallTask = ApiHelper.ApiCall(EnvironmentVariables.ApiKey);
       string result = apiCallTask.Result;
+
       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-      Console.WriteLine(jsonResponse["results"]);
+      List<Article> articleList = JsonConvert.DeserializeObject<List<Article>>(jsonResponse["results"].ToString());
+
+      foreach (Article article in articleList)
+      {
+        Console.WriteLine($"Section: {article.Section}");
+        Console.WriteLine($"Title: {article.Title}");
+        Console.WriteLine($"Abstract: {article.Abstract}");
+        Console.WriteLine($"Url: {article.Url}");
+        Console.WriteLine($"Byline: {article.Byline}");
+        Console.WriteLine($"Item_Type: {article.Item_Type}");
+        Console.WriteLine("------------------------");
+      }
     }
   }
 
