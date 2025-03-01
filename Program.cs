@@ -26,6 +26,17 @@ namespace ApiTest
         Console.WriteLine($"Url: {article.Url}");
         Console.WriteLine($"Byline: {article.Byline}");
         Console.WriteLine($"Item_Type: {article.Item_Type}");
+        if (article.Multimedia != null)
+        {
+          foreach (Multimedia media in article.Multimedia)
+          {
+            Console.WriteLine("---------");
+            Console.WriteLine($"MULTIMEDIA");
+            Console.WriteLine($"Type: {media.Type}");
+            Console.WriteLine($"SubType: {media.SubType}");
+            Console.WriteLine($"Caption: {media.Caption}");
+          }
+        }
         Console.WriteLine("------------------------");
       }
     }
