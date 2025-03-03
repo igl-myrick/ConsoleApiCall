@@ -40,9 +40,7 @@ _Insert your own API key in place of [YOUR-API-KEY-HERE]._
 
 _5: Next, run `dotnet build` in the command line to build the program._
 
-_6: Once the program is built, run `dotnet run` to start the program._
-
-_7: When the program is running, navigate to `https://localhost:5001` to view and use the website._
+_6: Once the program is built, run `dotnet run` to run the program and view current stories._
 
 ## Known Bugs
 
