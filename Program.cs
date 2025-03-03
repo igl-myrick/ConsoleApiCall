@@ -39,6 +39,7 @@ namespace ApiTest
         }
         Console.WriteLine("------------------------");
       }
+      Console.WriteLine("Data provided by The New York Times");
     }
   }
 
