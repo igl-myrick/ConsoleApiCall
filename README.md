@@ -22,7 +22,7 @@ _1: Clone the repository to a folder of choice on your machine (by either using 
 
 _2: Using a terminal application such as Git Bash or Windows Command Prompt, navigate to the `ConsoleApiCall` folder._
 
-_3. You will need to register an API key on the [New York Times' website](`https://developer.nytimes.com/`)._
+_3. You will need to register an API key on the [New York Times' website](https://developer.nytimes.com/)._
 
 _4: Once you have an API key, create an `EnvironmentVariables.cs` file within the `ConsoleApiCall` folder, including the following code:_
 
